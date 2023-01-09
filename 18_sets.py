@@ -1,26 +1,36 @@
-# set = a collection which is unordered, unindexed. No duplicate values allowed
-# set is faster then list
-utensils = {"fork", "spoon", "knife"}
-dishes = {"bowl","plate","cup"}
+# set = collection which is unordered, unindexed. No duplicate values
+tools = {"hammer","screwdriver","knife","scissors"}
+files = {"small file","medizum file","rasp","scissors"}
 
-utensils.add("napkin")
-utensils.remove("fork")
-dishes.update(utensils)
-#utensils.clear()
-dinner_table = utensils.union(dishes)
+# tools don't necessary appear in the order that they declared
+# AND THAT'S WHY IT'S FASTER THAN A LIST
 
-for i in dishes:
-    print(i+" ",end="")
-print()  
+# add an element:
+#tools.add("drill")
+
+# remove a element
+#tools.remove("knife")
+
+# clear the whole set
+#tools.clear()
+
+# add all elements from one set to another (files to tools right now)
+# tools.update(files)
+
+# we can also join two sets together and create an entirely new set
+#tool_trolley = tools.union(files)
+
+#for i in tool_trolley:
+#    print(i)
     
-for i in utensils:
-    print(i+" ",end="")
-print()
-print("------")
+print("-----")
+# we can also check the similarities and the differences
+# between the elements of two sets
 
-# to print the elements that occur only in one set
-print("difference: ")
-print(dishes.difference(utensils))
-# to print the similar ones
-print("intersection: ")
-print(utensils.intersection(dishes))
+# check what elements does tools have, that files doesn't
+print(tools.difference(files))
+# and the opposite:
+print(files.difference(tools))
+
+# check the common items of two sets, returns with the common values
+print(tools.intersection(files))
