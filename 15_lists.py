@@ -1,30 +1,38 @@
-# lists = used to store multiple items in a single variable
+# lists = store multiple items in a single variable
 
-food = ["pizza","hamburger","hotdog","spagetti"]
+food = ["pizza","hamburger","hot-dog","spagetti","pudding"]
 
-print(food)
-print(food[3])
+# change elements while runtime
+food[0] = "sushi"
 
-food[3]="sushi"
-print(food[3])
-print("----------")
+print(food[0])
+print(food[2])
+print(food[4])
+# print(food[5]) index out of range exception
 
+# add elements to the end of the list
 food.append("ice cream")
-food.remove("hotdog")
+
+# remove value
+food.remove("hot-dog")
+
+# remove last element
+#food.pop()
+
+# insert element to a given index
+# here "cake" to the 0 index
 food.insert(0, "cake")
-food.insert(0, "zuccini")
-# pop removes the last element of the list
-food.pop()
-# sort sorts the list alphabeticly
+
+# sort alphabetically
 food.sort()
 
-for i in food:
-    print(i)
-    
-print("----------")
-# clear removes all elements from the list
-food.clear()
-if len(food) == 0:
-    print("it's empty bruw")
-print(food)
-    
+# fully clear the list
+#food.clear()
+
+print()
+print("All: ")
+print()
+# show all elements
+for x in food:
+    print(x)
+
