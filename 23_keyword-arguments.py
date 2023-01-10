@@ -3,7 +3,7 @@
 #						Python knows the names of the arguments that our function recieves
 #---------------------------------------------
 
-positional arguments - the order DOES matter
+# positional arguments - the order DOES matter
 def henlo(first,middle,last):
      print("Hello "+first+" "+middle+" "+last)
     
