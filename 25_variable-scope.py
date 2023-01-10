@@ -1,15 +1,19 @@
-# variable scope = 	the region that a variable is recognized
-#					A variable is only available from inside the region it is created.
-#					A global and locally scoped versions of a variable can be created
-#						local scope - variable declared inside a function
-#						global scope - variable declared outside a function, and can be used inside and outside, but only INSIDE the MODULE
+# scope = 	The region that a variable is recognized
+#			a variable is only available from inside the region it is created
+#			a global and locally scoped versions of a variable can be created
 
-name = "Mathias" 			# global variable with global scope (abailable inside & outside function)
+name = "Mathias" # global scope (available inside & outside functions)
 
 def display_name():
-    name = "Rex" 		# local variable with local scope (available only inside this function)
-    print("hi",name)
+#	if we remove the local version, it's gonna call the global variable
+    name = "Rex" # local scope (available only inside this function)
+    print(name)
+    
+display_name() 	# local
+print(name)		# global
 
-# print(name)			we cannot access it from here.
-print("HELO "+name)
-display_name()
+# HIERARCHY
+#	L = Local
+#	E = Enclosing
+#	G = Global
+#	B = Built-in
