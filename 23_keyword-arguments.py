@@ -1,13 +1,18 @@
-# keyword arguments =	 arguments preceded by an identifier when we pass them to a function
-#                        the order of the arguments doesn't matter, unlike positional arguments
-#						 Python knows the names of the arguments that our function receives
+# keyword arguments = 	arguments preceded by an identifier when we pass them to a function
+#						The order of the arguments doesn't matter, unlike positional arguments
+#						Python knows the names of the arguments that our function recieves
+#---------------------------------------------
 
+positional arguments - the order DOES matter
+def henlo(first,middle,last):
+     print("Hello "+first+" "+middle+" "+last)
+    
+henlo("Mathias","Da","Rex")
 
-def hello(first, middle, last):
+#---------------------------------------------
+
+# keyword arguments - the order DOESN'T matter, because the preceded identifier
+def hello(first,middle,last):
     print("Hello "+first+" "+middle+" "+last)
     
-# POSITIONAL ARGUMENTS     
-# hello("Mr","Mathias","Rex")
-
-# KEYWORD ARGUMENTS
-hello(middle="Mr",last="Mathias",first="Rex")
+hello(last="Rex",first="Mathias",middle="Da")
